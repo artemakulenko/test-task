@@ -4,9 +4,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 4px;
+	gap: 11px;
 	text-decoration: none;
 	position: relative;
+	transition: gap 300ms ease;
+	&:hover {
+		gap: 20px;
+	}
 	&::before {
 		content: "";
 		position: absolute;
@@ -14,19 +18,5 @@
 		height: 2px;
 		background-color: $brown;
 		width: 100%;
-	}
-	&::after {
-		content: "";
-		background: url("../../img/svg/arrow.svg") no-repeat center center;
-		width: 14px;
-		height: 11px;
-		display: block;
-		padding-right: 6px;
-		transition: all 300ms ease;
-	}
-	&:hover {
-		&::after {
-			margin-left: 10px;
-		}
 	}
 }
