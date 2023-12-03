@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.footer {
+	margin-top: 130px;
+	background: $light-brown;
+	color: $light;
+	font-family: $roboto;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 64px 0 97px;
+		@include media-breakpoint-down(lg) {
+			grid-template-columns: 1fr;
+			gap: 50px;
+		}
+	}
+	&__divider {
+		background: $light;
+	}
+
+	&__icons-wrapper {
+		display: flex;
+		gap: 20px;
+		justify-content: flex-end;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	&__info {
+		@include font($roboto, $light, 1.6rem, 400, normal);
+	}
+
+	&__title {
+		@include font($roboto, $light, 1.5rem, 400, normal);
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		@include font($roboto, $light, 1.6rem, 400, normal);
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 1.6px;
+		text-transform: uppercase;
+		gap: 15px;
+		&-arrow {
+			display: flex;
+			align-items: center;
+			gap: 11px;
+		}
+	}
+}

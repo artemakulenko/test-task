@@ -1,0 +1,39 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.shop {
+	padding-block: 94px;
+	&__wrapper {
+		padding-inline: 83px;
+		@include media-breakpoint-down(sm) {
+			padding-inline: 0;
+		}
+	}
+	&__title {
+		color: $brown;
+		text-align: center;
+		font-family: Roboto;
+		font-size: 57px;
+		font-style: normal;
+		font-weight: 400;
+		@include media-breakpoint-down(sm) {
+			font-size: 35px;
+		}
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 70px;
+		margin-top: 25px;
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+	}
+
+	.arrow-link {
+		@include media-breakpoint-down(sm) {
+			width: 80%;
+		}
+	}
+}

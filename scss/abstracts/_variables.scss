@@ -1,0 +1,16 @@
+$white: #fff;
+$light: #ffffef;
+$brown: #56593d;
+$light-brown: #717353;
+
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+$rest-fonts: sans-serif, system-ui;
+$jost: "Jost", $rest-fonts;
+$roboto: "Roboto", $rest-fonts;

@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.hero {
+	&__wrapper {
+		min-height: 700px;
+		background: url("../../img/hero.jpg") no-repeat center center;
+		background-size: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding: 64px;
+		transition: background-size 300ms ease;
+		&:hover {
+			background-size: 110%;
+		}
+		@include media-breakpoint-down(xl) {
+			background-size: cover;
+			&:hover {
+				background-size: cover;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			text-align: left;
+			padding: 20px;
+		}
+	}
+	&__description {
+		@include font($roboto, $brown, 1.8rem, 400, normal);
+		letter-spacing: 1.8px;
+		margin-bottom: 10px;
+		@include media-breakpoint-down(sm) {
+			font-size: 15px;
+			color: $white;
+		}
+	}
+	&__title {
+		@include font($roboto, $brown, 4.5rem, 400, normal);
+		text-align: right;
+		margin-bottom: 25px;
+		@include media-breakpoint-down(sm) {
+			text-align: left;
+			font-size: 2.5rem;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+	@include font($roboto, $light, 1.6rem, 400, normal);
+	background: $brown;
+	cursor: pointer;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 16px 25px;
+	text-decoration: none;
+	border: none;
+	transition: background-color 300ms ease;
+	&:hover {
+		background: $light-brown;
+	}
+}

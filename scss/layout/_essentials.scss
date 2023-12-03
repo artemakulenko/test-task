@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.essentials {
+	margin: 23px 0;
+	&__wrapper {
+		background: url("../../img/plates.jpg") no-repeat center center;
+		background-size: 100%;
+		min-height: 700px;
+		padding-top: 70px;
+		transition: background-size 300ms ease;
+		&:hover {
+			background-size: 110%;
+		}
+		@include media-breakpoint-down(xl) {
+			background-size: cover;
+			&:hover {
+				background-size: cover;
+			}
+		}
+	}
+	&__title {
+		color: $brown;
+		text-align: center;
+		font-family: Roboto;
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 400;
+		@include media-breakpoint-down(sm) {
+			font-size: 30px;
+		}
+	}
+	&__description {
+		color: $brown;
+		margin-bottom: 11px;
+		text-align: center;
+		font-family: Roboto;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 400;
+		letter-spacing: 1.8px;
+	}
+}

@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.maple-boards {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px;
+		@include media-breakpoint-down(md) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__img-wrapper {
+		overflow: hidden;
+	}
+
+	&__title {
+		@include font($roboto, $brown, 2.4rem, 400, normal);
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	&__description {
+		@include font($roboto, $brown, 1.6rem, 400, normal);
+		text-align: center;
+		margin-top: 15px;
+	}
+	&__price {
+		@include font($roboto, $light-brown, 1.6rem, 400, normal);
+		text-align: center;
+		letter-spacing: 1.62px;
+		margin-top: 7px;
+	}
+	&__item {
+		text-align: center;
+		img {
+			object-fit: cover;
+			object-position: center;
+			transition: scale 300ms ease;
+			&:hover {
+				scale: 1.1;
+			}
+		}
+	}
+	&__container {
+		padding-block: 63px;
+	}
+}

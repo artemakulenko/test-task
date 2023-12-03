@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as *;
+
+.divider {
+	max-width: 40px;
+	background: $light-brown;
+	height: 1px;
+}

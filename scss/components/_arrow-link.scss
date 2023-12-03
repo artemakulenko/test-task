@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+.arrow-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	text-decoration: none;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		height: 2px;
+		background-color: $brown;
+		width: 100%;
+	}
+	&::after {
+		content: "";
+		background: url("../../img/svg/arrow.svg") no-repeat center center;
+		width: 14px;
+		height: 11px;
+		display: block;
+		padding-right: 6px;
+		transition: all 300ms ease;
+	}
+	&:hover {
+		&::after {
+			margin-left: 10px;
+		}
+	}
+}

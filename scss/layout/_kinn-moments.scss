@@ -1,0 +1,44 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.kinn-moments {
+	margin: 40px 0;
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 8px;
+		@include media-breakpoint-down(lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include media-breakpoint-down(sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__title {
+		@include font($roboto, $brown, 2.5rem, 400, normal);
+		text-align: center;
+	}
+
+	&__img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		transition: scale 300ms ease;
+		&:hover {
+			scale: 1.1;
+		}
+	}
+	&__light-block {
+		padding-inline: 32px 24px;
+		padding-block: 64px;
+	}
+	&__item {
+		display: flex;
+		overflow: hidden;
+	}
+	&__title {
+		margin-bottom: 32px;
+		text-align: center;
+	}
+}

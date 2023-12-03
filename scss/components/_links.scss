@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+a {
+	color: $brown;
+	text-align: center;
+	font-family: Roboto;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
